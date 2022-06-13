@@ -72,7 +72,7 @@ header {
 }
 main {
     background-color: var(--primary-color);
-    height: calc(100vh - 90px);
+    min-height: calc(100vh - 90px);
 }
 /* Card */
 .card {
@@ -93,6 +93,10 @@ main {
 }
 .card .image img {
     width: 100%;
+}
+.author {
+    font-size: 1.1rem;
+    margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
     .container {
