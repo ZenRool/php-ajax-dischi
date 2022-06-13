@@ -60,7 +60,7 @@ h2 {
 .container {
     margin: 0 auto;
     width: 540px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 body {
     font-family: sans-serif;
@@ -76,13 +76,14 @@ main {
 }
 /* Card */
 .card {
+    padding: 1rem;
     background-color: var(--second-color);
-    height: 450px;
+    height: calc(450px + 2rem);
     width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid red;
+    /* border: 3px solid red; */
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -109,7 +110,7 @@ main {
     }
     .card {
         width: 200px;
-        height: 250px;
+        height: calc(250px + 2rem);
     }
     .card .image {
         width: 100px;

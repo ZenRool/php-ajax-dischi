@@ -16,20 +16,21 @@ require "./props/database.php";
     <?php include "./props/header.php"; ?>
     <main>
         <div class="container d-flex wrap space-around pt-2">
-            <div class="card">
-                <div class="image">
-                    <img src="./img/logo.png" alt="" />
-                </div>
-                <h2 class="mt-1">titolo di prova</h2>
-                <p>Nome Artista grande</p>
-                <p>1994</p>
-            </div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+            <?php
+                foreach($database as $disc) {
+                    echo "
+                        <div class='card'>
+                            <div class='image'>
+                                <img src=". $disc['poster'] . " alt=" . $disc['title'] . "/>
+                            </div>
+                            <h2 class='mt-1'>". $disc['title'] ."</h2>
+                            <p>Nome Artista grande</p>
+                            <p>1994</p>
+                            </div>
+
+                        ";
+                }
+            ?>
         </div>
     </main>
 </body>
