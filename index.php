@@ -1,5 +1,5 @@
 <?php
-    // require "./props/database.php";
+    require "./props/database.php";
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -22,8 +22,8 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
-    <?php include "./props/header.php"; ?>
-    <main>
+        <!-- #ROOT VUE -->
+    <div id="root">    
         <!-- <div class="container d-flex wrap space-around pt-2"> -->
             <!-- PHP solution -->
             <?php
@@ -34,14 +34,14 @@
                 //                 <img src=". $disc['poster'] . " alt=" . $disc['title'] . "/>
                 //             </div>
                 //             <h2 class='mt-1'>". $disc['title'] ."</h2>
-                //             <p>$disc['author']</p>
-                //             <p>$disc['year']</p>
+                //             <p>" . $disc['author'] . "</p>
+                //             <p>" . $disc['year'] . "</p>
                 //             </div>
                 //         ";
                 // }
             ?>
-            <!-- #ROOT VUE -->
-        <div id="root">
+        <?php include "./props/header.php"; ?>
+        <main>
             <div v-if="loading" class="container d-flex wrap space-around pt-2">
                 Loading ...
             </div>

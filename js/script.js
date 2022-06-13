@@ -3,14 +3,26 @@ const app = new Vue( {
     data: {
         albums: [],
         loading: true,
+        genre: "",
     },
     created() {
-        axios
-          .get("http://localhost/php-ajax-dischi/props/server.php")
-          .then((resp) => {
-            this.albums = resp.data;
-            this.loading = false;
-          });
+        this.search();
     },
+    methods: {
+        search() {
+
+            axios
+            .get("http://127.0.0.1/php-ajax-dischi/props/server.php", {
+                params: {
+                    genre: this.genre,
+                }
+            })
+            .then((resp) => {
+              this.albums = resp.data;
+              this.loading = false;
+            });
+      }
+    }
+
 }
 );
